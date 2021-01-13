@@ -1,0 +1,12 @@
+{
+	"BOT_PREFIX": "/",
+
+	"PLAYING_STATUSES": [
+		"Truth or Dare",
+		"Would You Rather",
+		"Never Have I Ever"
+	],
+
+	"SUPPORT_SERVER": "https://discord.gg/qFKHbsh6Xa",
+	"BOT_TOKEN": "bot-token-goes-here"
+}
