@@ -87,7 +87,7 @@ async def on_disconnect():
 @client.event
 async def on_guild_join(guild):
 	"""https://discordpy.readthedocs.io/en/latest/api.html#discord.on_guild_join"""
-	
+
 	print(f"[Guild] Added to: {guild.name} (id: {guild.id}). This guild has {guild.member_count} members!")
 
 @client.event
@@ -99,9 +99,13 @@ async def on_guild_remove(guild):
 @client.event
 async def on_command_error(ctx, error):
 	"""https://discordpy.readthedocs.io/en/latest/ext/commands/api.html#discord.on_command_error"""
-	
+
 	error = getattr(error, 'original', error)
-	if isinstance(error, commands.CommandOnCooldown):
+	ignored = (commands.CommandNotFound, commands.MissingPermissions)
+
+	if isinstance(error, ignored):
+		return
+	elif isinstance(error, commands.CommandOnCooldown):
 		return await ctx.send(f"\⛔ **This command is on cooldown. Try again in {error.retry_after:.2f}s.**", delete_after = 7)
 	else:
 		return print(f"[Exception] An exception has occured. {error}")
