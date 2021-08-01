@@ -24,7 +24,7 @@ An instance of the bot is hosted publically which you can invite using [this lin
 
 1. Clone the repository. (I recommend making a virtual environment)
 ```
-git clone https://github.com/posetack/discord-conversational-games-bot.git
+git clone https://github.com/waterrmalannk/discord-conversational-games-bot.git
 ```
 2. Install the requirements.txt
 ```

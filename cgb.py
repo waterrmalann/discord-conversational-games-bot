@@ -116,7 +116,7 @@ async def on_command_error(ctx, error):
 async def cmds(ctx):
 	"""General info about the bot and command help."""
 
-	embed = discord.Embed(title = "Conversational Games Bot", url = "https://github.com/posetack/discord-conversational-games-bot")
+	embed = discord.Embed(title = "Conversational Games Bot", url = "https://github.com/waterrmalann/discord-conversational-games-bot")
 	embed.add_field(
 		name = "» About",
 		value = "Hello! I'm a Conversational Games Bot. " \
@@ -140,7 +140,7 @@ async def cmds(ctx):
 			f"\🔗 **[Support / Suggestions / Feedback]({CONFIG['SUPPORT_SERVER']})**",
 		inline = False
 	)
-	embed.set_footer(text = "Made with ❤️ by PoseTack#1700")
+	embed.set_footer(text = "Made with ❤️ by WaterrMalann#1700")
 	await ctx.send(embed = embed)
 
 @client.command(aliases = ['t'])
